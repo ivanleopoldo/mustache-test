@@ -4,7 +4,7 @@ import path from "path";
 import tsify from "tsify";
 
 const inputFile = path.join(__dirname, "index.ts");
-const outputFile = path.join(__dirname, "bundle.js");
+const outputFile = path.join(path.dirname(__dirname), "dist/bundle.js");
 
 const b = browserify({ entries: [inputFile], standalone: "MyPackage" }).plugin(
   tsify,

@@ -1,11 +1,11 @@
 {
   "name": "test-template",
-  "module": "index.ts",
+  "module": "./src/index.ts",
   "type": "module",
   "scripts": {
-    "build": "bun run utils.ts",
-    "serve": "bun run build && bun run server.ts",
-    "watch": "nodemon --watch . --ext ts,html,js --exec 'bun run serve'"
+    "build": "bun run ./src/utils.ts",
+    "serve": "bun run build && bun run ./src/server.ts",
+    "watch": "nodemon . --ext ts,html,js,css --exec 'bun run serve'"
   },
   "devDependencies": {
     "@types/browserify": "^12.0.40",
