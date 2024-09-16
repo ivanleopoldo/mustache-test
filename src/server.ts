@@ -4,7 +4,7 @@ import handler from "serve-handler";
 const server = http.createServer((req, res) => {
   return handler(req, res, {
     cleanUrls: true,
-    public: "output",
+    public: "dist",
     directoryListing: false,
     unlisted: [".*"],
   });

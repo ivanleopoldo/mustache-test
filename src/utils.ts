@@ -7,7 +7,9 @@ const template = fs.readFileSync(templateFile, "utf-8");
 const outputDir = path.join(path.dirname(__dirname), "dist");
 const outputFile = path.join(outputDir, "index.html");
 
-const output = Mustache.render(template, { name: "wow" });
+fs.rmdirSync(outputDir, { recursive: true });
 
-fs.mkdir(path.dirname(outputFile), { recursive: true }, (err) => {});
-fs.writeFileSync(outputFile, output, { flag: "a" });
+const output = Mustache.render(template, { name: "hello world" });
+
+fs.mkdirSync(outputDir, { recursive: true });
+fs.writeFileSync(outputFile, output, { flag: "w" });
