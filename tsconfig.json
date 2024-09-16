@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // Enable latest features
+    "target": "es2016",
+    "module": "commonJS",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+
+    // Bundler mode
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
