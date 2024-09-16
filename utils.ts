@@ -6,7 +6,9 @@ const templateFile = path.join(__dirname, "templates/index.html");
 const template = fs.readFileSync(templateFile, "utf-8");
 const outputFile = path.join(__dirname, "output/index.html");
 
-const output = Mustache.render(template, { name: "world" });
+const output = Mustache.render(template, { name: "wow" });
 
-fs.mkdir(path.dirname(outputFile), { recursive: true }, (err) => {});
-fs.writeFileSync(outputFile, output, { flag: "wx" });
+if (!fs.lstatSync(outputFile).isFile()) {
+  fs.mkdir(path.dirname(outputFile), { recursive: true }, (err) => {});
+  fs.writeFileSync(outputFile, output, { flag: "wx" });
+}
