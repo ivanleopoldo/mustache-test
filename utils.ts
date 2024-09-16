@@ -9,4 +9,4 @@ const outputFile = path.join(__dirname, "output/index.html");
 const output = Mustache.render(template, { name: "world" });
 
 fs.mkdir(path.dirname(outputFile), { recursive: true }, (err) => {});
-fs.writeFileSync(outputFile, output);
+fs.writeFileSync(outputFile, output, { flag: "wx" });
